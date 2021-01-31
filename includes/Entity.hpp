@@ -5,27 +5,26 @@
 ** N/a
 */
 
-#ifndef ENGINE_HPP
-#define ENGINE_HPP
+#ifndef ENTITY_HPP
+#define ENTITY_HPP
 
 #define ERROR 84
 #define SUCCES 0
 
-#include "Entity.hpp"
 #include <iostream>
 #include <vector>
 
-class NSEngine {
+class Entity {
     public:
-        NSEngine();
-        ~NSEngine() {};
+        Entity(int id);
+        ~Entity() {};
 
-        std::vector<Entity*> getEntities() const;
         void dump() const;
+        int getId() const;
+    
     private:
-        int _id;
+        int _id = 0;
         std::string _name;
-        std::vector<Entity*> _entities;
 };
 
-#endif //ENGINE_HPP
+#endif //ENTITY_HPP

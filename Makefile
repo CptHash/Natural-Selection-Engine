@@ -6,7 +6,8 @@
 ##
 
 SRC	=	src/main.cpp \
-		src/Engine.cpp
+		src/Engine.cpp \
+		src/Entity.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
