@@ -5,34 +5,32 @@
 ** N/a
 */
 
+#include "../includes/Environment.hpp"
 #include "../includes/Entity.hpp"
 #include <ctime>
 #include <unistd.h>
 #include <iomanip>
 #include <iostream>
+#include <vector>
 
-Entity::Entity(int id) : _id(id), _minimumTemp(-20), _maximumTemp(50)
+Environment::Environment() : _minimumTemp(-20), _maximumTemp(50)
 {
-    std::cout << "Entity " << _id << " created:" << std::endl;
+    std::cout << "Environment created." << std::endl;
     std::cout << "  -> Temp: [" << _minimumTemp << "," << _maximumTemp << "]"<< std::endl;
 };
 
-void Entity::dump() const
+void Environment::dump() const
 {
-    std::cout << "Dump" << std::endl;
+    std::cout << "Dump:" << std::endl;
 }
 
-int Entity::getId() const
-{
-    return _id;
-}
 
-float Entity::getMinimumTemp() const 
+float Environment::getMinimumTemp() const 
 {
     return _minimumTemp;
 }
 
-float Entity::getMaximumTemp() const 
+float Environment::getMaximumTemp() const 
 {
     return _maximumTemp;
 }

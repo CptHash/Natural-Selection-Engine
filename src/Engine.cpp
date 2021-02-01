@@ -5,6 +5,7 @@
 ** N/a
 */
 
+#include "../includes/Environment.hpp"
 #include "../includes/Engine.hpp"
 #include "../includes/Entity.hpp"
 #include <ctime>
@@ -26,6 +27,17 @@ void NSEngine::dump() const
     std::cout << "Dump:" << std::endl;
     for(auto &entity : _entities) {
         std::cout << entity->getId() << std::endl;
+    }
+}
+
+void NSEngine::compute() const
+{
+    for(auto &entity : _entities) {
+        if (entity->getMinimumTemp() >  _environment.getMinimumTemp() ||
+        entity->getMaximumTemp() < _environment.getMaximumTemp())
+            std::cout << "Entity " << entity->getId() << " is unsafe." <<std::endl;
+        else
+            std::cout << "Entity " << entity->getId() << " is safe." <<std::endl;
     }
 }
 

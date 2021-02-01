@@ -7,7 +7,8 @@
 
 SRC	=	src/main.cpp \
 		src/Engine.cpp \
-		src/Entity.cpp
+		src/Entity.cpp \
+		src/Environment.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 

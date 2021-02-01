@@ -19,5 +19,6 @@ int main (int ac, char **av)
 {
     NSEngine engine = NSEngine();
 
+    engine.compute();
     return SUCCES;
 }

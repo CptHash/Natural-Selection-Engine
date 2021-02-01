@@ -5,8 +5,8 @@
 ** N/a
 */
 
-#ifndef ENTITY_HPP
-#define ENTITY_HPP
+#ifndef ENVIRONMENT_HPP
+#define ENVIRONMENT_HPP
 
 #define ERROR 84
 #define SUCCES 0
@@ -14,21 +14,18 @@
 #include <iostream>
 #include <vector>
 
-class Entity {
+class Environment {
     public:
-        Entity(int id);
-        ~Entity() {};
+        Environment();
+        ~Environment() {};
 
         void dump() const;
-        int getId() const;
         float getMinimumTemp() const;
         float getMaximumTemp() const;
     
     private:
-        int _id = 0;
-        std::string _name;
         float _minimumTemp; //Survive Range
         float _maximumTemp;
 };
 
-#endif //ENTITY_HPP
+#endif //ENVIRONMENT_HPP
