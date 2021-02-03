@@ -1,6 +1,6 @@
 ##
-## EPITECH PROJECT, 2020
-## Created by mathieu
+## Natural Selection Engine
+## Created by mathieu on 31/01/20201.
 ## File description:
 ## makefile
 ##
